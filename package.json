@@ -2,6 +2,7 @@
   "name": "f.orum-storage-s3",
   "version": "1.0.0",
   "description": "reference s3 file storage adapter for f.orum",
+  "homepage": "https://github.com/twinlabs/f.orum-storage-s3",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
