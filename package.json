@@ -1,6 +1,6 @@
 {
   "name": "f.orum-storage-s3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "reference s3 file storage adapter for f.orum",
   "homepage": "https://github.com/twinlabs/f.orum-storage-s3",
   "main": "index.js",
