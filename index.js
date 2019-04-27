@@ -2,10 +2,10 @@ var AWS = require('aws-sdk');
 var s3 = new AWS.S3();
 
 module.exports = {
-  send: function(data, configuration) {
+  send: function(fileData, configuration) {
     var promise = new Promise(function(resolve, reject){
       try {
-        var file = require('fs').readFileSync(data.files["files[]"].path)
+        var file = require('fs').readFileSync(fileData.path)
       } catch(error) {
         console.error(error);
 
@@ -14,10 +14,10 @@ module.exports = {
 
       var headParams = {
         Bucket: configuration.bucket,
-        Key: data.files["files[]"].name,
+        Key: fileData.name,
       }
       var uploadParams = Object.assign({
-        ContentType: data.files["files[]"].mimetype,
+        ContentType: fileData.mimetype,
         Body: file,
       }, headParams)
 
